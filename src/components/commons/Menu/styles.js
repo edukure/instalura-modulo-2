@@ -82,13 +82,13 @@ MenuWrapper.CentralSide = styled.div`
     transition: 200ms ease-in-out;
 
     ${breakpointsMedia({
-      xs: css`
+    xs: css`
         ${TextStyleVariantsMap.smallestException}
       `,
-      md: css`
+    md: css`
         ${TextStyleVariantsMap.paragraph1}
       `,
-    })}
+  })}
 
     &:hover,
     &:focus {
