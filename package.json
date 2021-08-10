@@ -6,11 +6,13 @@
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore .",
     "custom-script": "node ./script-test.js",
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint"
+      "pre-push": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
@@ -26,6 +28,8 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.31.0",
